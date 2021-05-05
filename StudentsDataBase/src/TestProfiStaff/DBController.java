@@ -6,7 +6,7 @@ public class DBController {
 
     private Connection connect() {
         SQLiteDataSource dataSource = new SQLiteDataSource();
-        String url = "jdbc:sqlite:C:\\Users\\p_nik\\IdeaProjects\\Students\\db\\StudentsDB.db";
+        String url = "jdbc:sqlite:db\\StudentsDB.db";
         dataSource.setUrl(url);
         Connection con = null;
         try {
@@ -18,14 +18,6 @@ public class DBController {
     }
 
     public void createTable() {
-        String sql1 = "DROP TABLE IF EXISTS students;";
-
-        try (Connection con = connect();
-             Statement stmt = con.createStatement()) {
-            stmt.execute(sql1);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
         String createTable = "CREATE TABLE IF NOT EXISTS students (\n"
                             + " id INTEGER PRIMARY KEY,\n"
                             + " Фамилия TEXT NOT NULL,\n"
