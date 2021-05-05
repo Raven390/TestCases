@@ -10,8 +10,8 @@ import java.util.Objects;
 public class Main {
 
     public static void main(String[] args) {
-	    String directoryName = "D:\\AAA";
-	    String finalFileName = "D:\\AAA\\product.txt";
+	    String directoryName = "files\\AAA";
+	    String finalFileName = "files\\AAA\\product.txt";
 
         FilenameFilter txtFilter = (File dir, String name) -> (new File(dir.getAbsolutePath()
                 + File.separator + name).isDirectory()) || name.toLowerCase().endsWith(".txt");
