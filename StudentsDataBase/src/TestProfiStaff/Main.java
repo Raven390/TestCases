@@ -19,6 +19,7 @@ public class Main {
 				}
 				case 3 -> db.selectAll();
 				case 4 -> exit = true;
+				default -> System.out.println("Неверный выбор");
 			}
 		} while (!exit);
     }
